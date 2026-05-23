@@ -124,3 +124,4 @@ NON-FUNCTIONAL REQUIREMENTS
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 ลิงค์คลิป DEMO (https://drive.google.com/file/d/1M14F91cLhPUBbTWUHUXcFX90ytUmkazJ/view?usp=sharing)
+https://youtu.be/lK8GsHPYMkQ?si=V7UCQ_nqKYk-w3Ql
