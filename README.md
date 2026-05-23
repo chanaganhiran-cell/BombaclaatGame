@@ -123,5 +123,4 @@ NON-FUNCTIONAL REQUIREMENTS
  - อัลกอริทึมการสุ่ม (RNG) สำหรับการวาง Breakable Wall และการสุ่มดรอปไอเท็ม ต้องมีการกระจายตัวแบบสุ่มอย่างแท้จริง เพื่อไม่ให้เกิดความได้เปรียบเสียเปรียบ
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
-ลิงค์คลิป DEMO (https://drive.google.com/file/d/1M14F91cLhPUBbTWUHUXcFX90ytUmkazJ/view?usp=sharing)
-https://youtu.be/lK8GsHPYMkQ?si=V7UCQ_nqKYk-w3Ql
+ลิงค์คลิป DEMO https://youtu.be/pnZpK4dss-M
