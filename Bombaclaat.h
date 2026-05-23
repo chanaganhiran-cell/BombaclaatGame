@@ -61,7 +61,7 @@ private:
     Player* owner;
     bool exploded;
 public:
-    Bomb(int x, int y, int r, Player* p);
+    Bomb(int x, int y, int r, Player* p, int totalPlayers);
     bool isExploded() const;
     Player* getOwner() const;
     int getRange() const;

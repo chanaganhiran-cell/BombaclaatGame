@@ -35,7 +35,7 @@ void Player::increaseMaxAP() { maxAP++; }
 int Player::getMaxBombs() const { return maxBombs; }
 
 // --- Bomb Implementation ---
-Bomb::Bomb(int x, int y, int r, Player* p) : GameObject(x, y), timer(3), range(r), owner(p), exploded(false) {}
+Bomb::Bomb(int x, int y, int r, Player* p, int totalPlayers) : GameObject(x, y), timer(totalPlayers * 2), range(r), owner(p), exploded(false) {}
 bool Bomb::isExploded() const { return exploded; }
 Player* Bomb::getOwner() const { return owner; }
 int Bomb::getRange() const { return range; }
@@ -370,12 +370,11 @@ bool BomberBoard::handleInput() {
             cout << "There is already a bomb here!\n"; // กันวางทับที่เดิม
             system("pause");
         } else if (p->canDropBomb()) {
-            // ถ้าผ่านทุกเงื่อนไข ให้วางระเบิดได้
-            activeBombs.push_back(new Bomb(p->getX(), p->getY(), p->getFireRange(), p));
-            p->addBombCount(); 
-            //currentAP--; 
+            // ++ แก้ไขบรรทัด push_back ตรงนี้ โดยเติม players.size() เข้าไปเป็นพารามิเตอร์ตัวสุดท้าย
+            activeBombs.push_back(new Bomb(p->getX(), p->getY(), p->getFireRange(), p, players.size()));
             
-            bombPlacedThisTurn = true; // ---> ล็อคทันที! ห้ามวางอีกในเทิร์นนี้
+            p->addBombCount(); 
+            bombPlacedThisTurn = true;
         } else {
             cout << "Cannot drop more bombs (Reached max capacity)!\n";
             system("pause");
